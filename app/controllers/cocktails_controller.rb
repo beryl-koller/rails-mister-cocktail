@@ -1,6 +1,7 @@
 class CocktailsController < ApplicationController
 
     def index
+        @disable_nav = true
         @cocktails = Cocktail.all
     end
 
