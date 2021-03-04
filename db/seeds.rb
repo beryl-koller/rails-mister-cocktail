@@ -8,5 +8,10 @@ ingredient = JSON.parse(ingredient_serialized)
 hash = ingredient.values[0]
 
 hash.each do |element|
-    Ingredient.create(name: element.values)
+    Ingredient.create(name: element.values.first)
 end
+
+# hash.each do |element|
+#     p element.values.first
+#     # puts element.values
+# end

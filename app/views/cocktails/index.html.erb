@@ -1,14 +1,34 @@
-<div class="banner" style="background-image: url(https://res.cloudinary.com/df0stqosw/image/upload/v1614857471/Alfred/banner_kp7o1n.png);">
-  <div class="container">
-    <h1>Alfred</h1>
-    <p>Your personal bartender</p>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+  <%= link_to "root", class: "navbar-brand" do %>
+    <div class="navbar-home d-none">
+      <%= image_tag "https://res.cloudinary.com/df0stqosw/image/upload/v1614869201/Alfred/alfred_x4bvyv.png", class: "avatar" %>
+      <h3>ALFRED</h3>
+    </div>
+  <% end %>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-red" %>
+      </li>
+    </ul>
   </div>
 </div>
 
-<% @cocktails.each do |cocktail| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(61,21,21,0.6), rgba(61,21,21,0.6)), url(https://via.placeholder.com)">
-        <h2><%= link_to cocktail.name, cocktail_path(cocktail), id: 'card-title' %></h2>
-    </div>
-<% end %>
+<div class="banner" style="background-image: url(https://res.cloudinary.com/df0stqosw/image/upload/v1614857471/Alfred/banner_kp7o1n.png);">
+  <div class="container" id="title-main">
+    <h1>Alfred</h1>
+    <p>Your favorite bartender</p>
+  </div>
+</div>
 
-<%= link_to "Add a cocktail", new_cocktail_path %>
+<div class="container">
+    <div class="cards">
+        <% @cocktails.each do |cocktail| %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(61,21,21,0.6), rgba(61,21,21,0.6)), url(https://via.placeholder.com)">
+                <h2><%= link_to cocktail.name, cocktail_path(cocktail), id: 'card-title' %></h2>
+            </div>
+        <% end %>
+    </div>
+</div>
+

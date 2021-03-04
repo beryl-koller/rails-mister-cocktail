@@ -1,0 +1,11 @@
+.btn-red {
+    color: white;
+    background: $alfred-red;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: 200;
+    transition: opacity 0.3s ease;
+    &:hover {
+        opacity: 0.6;
+    }
+}
