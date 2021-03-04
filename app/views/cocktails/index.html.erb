@@ -1,0 +1,14 @@
+<div class="banner" style="background-image: url(https://res.cloudinary.com/df0stqosw/image/upload/v1614857471/Alfred/banner_kp7o1n.png);">
+  <div class="container">
+    <h1>Alfred</h1>
+    <p>Your personal bartender</p>
+  </div>
+</div>
+
+<% @cocktails.each do |cocktail| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(61,21,21,0.6), rgba(61,21,21,0.6)), url(https://via.placeholder.com)">
+        <h2><%= link_to cocktail.name, cocktail_path(cocktail), id: 'card-title' %></h2>
+    </div>
+<% end %>
+
+<%= link_to "Add a cocktail", new_cocktail_path %>
