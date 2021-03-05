@@ -17,3 +17,30 @@
     color: white;
     text-decoration: none;
 }
+
+.card-show {
+    max-width: 800px;
+    margin-top: 40px;
+}
+
+.card-show-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-show-title {
+    font-size: 48px;
+    text-align: center;
+}
+
+.card-show-dose {
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-minus-circle {
+    color: white;
+}

@@ -11,10 +11,24 @@ require("channels")
 import 'bootstrap';
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { initSweetalert } from '../plugins/init_sweetalert';
+import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initUpdateNavbarOnScroll();
+  initSweetalert('#sweet-alert-demo', {
+  title: "Are you sure?",
+  text: "This action cannot be reversed",
+  icon: "warning"
+}, (value) => {
+  if (value) {
+    const link = document.querySelector('#delete-link');
+    link.click();
+  }
+});
+  initSelect2({
+  });
 });
 
 // Uncomment to copy all static images under ../images to the output folder and reference

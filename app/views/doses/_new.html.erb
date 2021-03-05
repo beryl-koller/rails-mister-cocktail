@@ -5,9 +5,9 @@
       <%= f.label :description, class: "input-group-text" %>
       <%= f.text_field :description, class: "form-control", placeholder: "2cl" %>
     </div>
-    <div class="input-group mb-3">
+    <div class="input-group">
       <%= f.association :ingredient, label: false, prompt: "Choose ingredient" %>
     </div>
       <%= f.submit 'Add!', class: "btn btn-red" %>
-  <% end %>
+    <% end %>
 </div>

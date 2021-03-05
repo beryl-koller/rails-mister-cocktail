@@ -1,10 +1,11 @@
-<div class="container form-container">
+<div class="container form-container-center">
 <h2 class="text-center">Add a new cocktail</h2>
   <%= simple_form_for(@cocktail) do |f| %>
     <div class="input-group mb-3">
       <%= f.label :name, class: "input-group-text" %>
       <%= f.text_field :name, class: "form-control" %>
     </div>
+      <%= f.input :picture, as: :file %>
       <%= f.submit 'Start creating!', class: "btn btn-red" %>
   <% end %>
 </div>
