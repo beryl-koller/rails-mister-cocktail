@@ -8,7 +8,9 @@ $headers-font: "Vanrott", "serif";
 // To use a font file (.woff) uncomment following lines
 @font-face {
   font-family: "Vanrott";
-  src: font-url('/fonts/vanrott-webfont.woff') format('woff'),
-       font-url('/fonts/vanrott-webfont.woff2') format('woff2');
+  src: font-url('fonts/vanrott-webfont.woff') format('woff'),
+       font-url('fonts/vanrott-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 // $my-font: "Font Name";
